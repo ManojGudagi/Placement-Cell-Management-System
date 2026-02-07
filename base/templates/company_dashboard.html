@@ -1,0 +1,149 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="company-page">
+
+    <!-- Company Info -->
+    <div class="company-header">
+        <img src="https://img.freepik.com/free-vector/bird-colorful-gradient-design-vector_343694-2506.jpg?semt=ais_hybrid&w=740&q=80" class="company-logo">
+        <div>
+            <h1>ABC Technologies Pvt Ltd</h1>
+            <p>📍 Bangalore | 🌐 www.abctech.com | ✉ hr@abctech.com</p>
+        </div>
+    </div>
+
+    <!-- Job Details -->
+    <div class="job-details">
+        <h2>Job Role: Python Django Developer</h2>
+        <p><b>Type:</b> Full Time</p>
+        <p><b>Salary:</b> ₹6 LPA</p>
+        <p><b>Location:</b> Bangalore</p>
+        <p><b>Required Skills:</b> Python, Django, SQL</p>
+        <p><b>Min CGPA:</b> 7.0</p>
+        <p><b>Eligible Branches:</b> CSE, ISE</p>
+        <p><b>Last Date:</b> 20 Feb 2026</p>
+    </div>
+
+    <!-- Students Applied -->
+    <h2 class="applied-count">👨‍🎓 Students Applied: {{ data|length }}</h2>
+
+    <!-- Student Cards -->
+    <div class="student-container">
+        {% for i in data %}
+        <div class="student-card">
+            <h3>{{ i.student_name }}</h3>
+            <p><b>Email:</b> {{ i.student_email }}</p>
+            <p><b>USN:</b> {{ i.student_usn }}</p>
+            <p><b>Branch:</b> {{ i.student_branch }}</p>
+            <p><b>CGPA:</b> {{ i.student_cgpa }}</p>
+
+            <div class="btn-group">
+                <a href="{{ i.student_resume.url }}" target="_blank" class="view">View Resume</a>
+                <a href="#" class="shortlist">Shortlist</a>
+                <a href="#" class="reject">Reject</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+
+<div class="company-page">
+
+    <!-- Company Info -->
+    <div class="company-header">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQMhYuMbA0YMCa1hNHoCZRPjswt6-6AXCb2A&s" class="company-logo">
+        <div>
+            <h1>Infosys Technologies Pvt Ltd</h1>
+            <p>📍 Hubli | 🌐 www.abctech.com | ✉ hr@abctech.com</p>
+        </div>
+    </div>
+
+    <!-- Job Details -->
+    <div class="job-details">
+        <h2>Job Role: Python Developer</h2>
+        <p><b>Type:</b> Full Time</p>
+        <p><b>Salary:</b> ₹6 LPA</p>
+        <p><b>Location:</b> Hubli</p>
+        <p><b>Required Skills:</b> Python</p>
+        <p><b>Min CGPA:</b> 8.0</p>
+        <p><b>Eligible Branches:</b> CSE, ISE</p>
+        <p><b>Last Date:</b> 09 Feb 2026</p>
+    </div>
+
+    <!-- Students Applied -->
+    <h2 class="applied-count">👨‍🎓 Students Applied: {{ data|length }}</h2>
+
+    <!-- Student Cards -->
+    <div class="student-container">
+        {% for i in data %}
+        <div class="student-card">
+            <h3>{{ i.student_name }}</h3>
+            <p><b>Email:</b> {{ i.student_email }}</p>
+            <p><b>USN:</b> {{ i.student_usn }}</p>
+            <p><b>Branch:</b> {{ i.student_branch }}</p>
+            <p><b>CGPA:</b> {{ i.student_cgpa }}</p>
+
+            <div class="btn-group">
+                <a href="{{ i.student_resume.url }}" target="_blank" class="view">View Resume</a>
+                <a href="#" class="shortlist">Shortlist</a>
+                <a href="#" class="reject">Reject</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+
+<div class="company-page">
+
+    <!-- Company Info -->
+    <div class="company-header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Tata_Consultancy_Services_old_logo.svg/1280px-Tata_Consultancy_Services_old_logo.svg.png" class="company-logo">
+        <div>
+            <h1>TCS Technologies Pvt Ltd</h1>
+            <p>📍 Bangalore | 🌐 www.abctech.com | ✉ hr@abctech.com</p>
+        </div>
+    </div>
+
+    <!-- Job Details -->
+    <div class="job-details">
+        <h2>Job Role: Django Developer</h2>
+        <p><b>Type:</b> Full Time</p>
+        <p><b>Salary:</b> ₹5 LPA</p>
+        <p><b>Location:</b> Bangalore</p>
+        <p><b>Required Skills:</b> Python, Django</p>
+        <p><b>Min CGPA:</b> 7.0</p>
+        <p><b>Eligible Branches:</b> CSE, ISE</p>
+        <p><b>Last Date:</b> 20 Feb 2026</p>
+    </div>
+
+    <!-- Students Applied -->
+    <h2 class="applied-count">👨‍🎓 Students Applied: {{ data|length }}</h2>
+
+    <!-- Student Cards -->
+    <div class="student-container">
+        {% for i in data %}
+        <div class="student-card">
+            <h3>{{ i.student_name }}</h3>
+            <p><b>Email:</b> {{ i.student_email }}</p>
+            <p><b>USN:</b> {{ i.student_usn }}</p>
+            <p><b>Branch:</b> {{ i.student_branch }}</p>
+            <p><b>CGPA:</b> {{ i.student_cgpa }}</p>
+
+            <div class="btn-group">
+                <a href="{{ i.student_resume.url }}" target="_blank" class="view">View Resume</a>
+                <a href="#" class="shortlist">Shortlist</a>
+                <a href="#" class="reject">Reject</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+
+{% endblock %}

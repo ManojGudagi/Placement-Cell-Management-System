@@ -1,0 +1,75 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="register-page">
+
+<center>
+
+    <form action="" method="POST" enctype="multipart/form-data">
+
+        <fieldset>
+
+            <legend>Registration Form</legend>
+
+            {% csrf_token %}
+
+            <label for="">Student Name : </label>
+            <input type="text" name="student_name" required>
+
+            <br><br>
+
+            <label for="">Student P(email) : </label>
+            <input type="email" name="student_email" required>
+
+            <br><br>
+
+
+            <label for="">Student Number : </label>
+            <input type="text" name="student_number" required>
+
+            <br><br>
+
+
+            <label for="">Student USN : </label>
+            <input type="text" name="student_usn" required>
+
+            <br><br>
+
+
+            <label for="">Student Branch : </label>
+            <select name="student_branch" id="" required>
+                <option value="">---- Select ----</option>
+                <option value="CSE"> Computer Science Engineering </option>
+                <option value="EEE"> Electrical And Electronics Engineering </option>
+                <option value="ECE"> Electronics Engineering </option>
+                <option value="CIVIL"> Civil Engineering </option>
+                <option value="MECH"> Mechanical Engineering </option>
+            </select>
+
+            <br><br>
+
+            <label for="">Student CGPA : </label>
+            <input type="text" name="student_cgpa" required>
+
+            <br><br>
+
+            <label for="">Student Resume : </label>
+            <input type="file" name="student_resume" required>
+
+            <br><br>
+
+
+            <button type="submit">Register</button>
+
+
+        </fieldset>
+
+    </form>
+
+</center>
+
+</div>
+
+
+{% endblock %}

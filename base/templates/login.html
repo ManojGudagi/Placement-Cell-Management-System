@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="login-page">
+    
+<center>
+    <h1> Student Details </h1>
+
+    {% for i in data %}
+
+    <div class="card">
+
+     <h2>{{i.student_name}}</h2>
+
+     <h2>{{i.student_email}}</h2>
+
+     <h2>{{i.student_number}}</h2>
+
+     <h2>{{i.student_usn}}</h2>
+
+     <h2>{{i.student_branch}}</h2>
+
+     <h2>{{i.student_cgpa}}</h2>
+
+     <a href="{{ i.student_resume.url }}" target="_blank">View Resume</a>
+
+     </div>
+
+    {% endfor %}
+
+
+</center>
+
+</div>
+{% endblock %}
